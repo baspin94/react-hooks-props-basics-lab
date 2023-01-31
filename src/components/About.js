@@ -3,10 +3,10 @@ import user from "../data/user";
 
 import Links from "./Links"
 
-function About(props) {
+function About({bio}) {
   function displayBio() {
-    if(props.bio) {
-      return (<p>{props.bio}</p>);
+    if(bio) {
+      return (<p>{bio}</p>);
     } else {
       return null;
     }
@@ -19,7 +19,6 @@ function About(props) {
       <Links
         github={user.links.github}
         linkedin={user.links.linkedin}
-      
       />
     </div>
   );
